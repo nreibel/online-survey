@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  
+  <form action="submit.php" method="POST">
+    <table>
+      <tr>
+        <td class="question" colspan="2">
+          <p>Nom, prénom</p>
+          <input name="nom" type="text" />
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="question">
+          <p>Question 1 (QCM)</p>
+          <input name="q1rep1" type="checkbox" text="plop">Reponse 1</input>
+          <input name="q1rep2" type="checkbox">Reponse 2</input>
+        </td>
+        <td class="question">
+          <p>Question 2</p>
+          <select name="question2">
+            <option value="rep1">Reponse 1</option>
+            <option value="rep2">Reponse 2</option>
+          </select>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="question">
+          <p>Question 3 (Une seule reponses)</p>
+          <input type="radio" name="question3" value="rep1">Reponse 1</input>
+          <input type="radio" name="question3" value="rep2">Reponse 2</input>
+          <input type="radio" name="question3" value="rep3">Reponse 3</input>
+        </td>
+        <td class="question">
+          <p>Question 4 (Une seule reponses)</p>
+          <input type="radio" name="question4" value="rep1">Reponse 1</input>
+          <input type="radio" name="question4" value="rep2">Reponse 2</input>
+          <input type="radio" name="question4" value="rep3">Reponse 3</input>
+        </td>
+      </tr>
+    </table>
+    <button type="submit">Valider</button>
+  </form>
+
+  </body>
+</html>

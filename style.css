@@ -1,0 +1,10 @@
+td.question {
+  border: solid 1px black;
+  margin: 2px;
+  padding: 10px;
+}
+
+p {
+  margin: 5px;
+  padding: 0px;
+}
