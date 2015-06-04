@@ -1,10 +1,12 @@
-td.question {
-  border: solid 1px black;
-  margin: 2px;
-  padding: 10px;
+table {
+    border-collapse: collapse;
 }
 
-p {
-  margin: 5px;
-  padding: 0px;
+table td {
+  border: solid 1px lightgrey;
+  margin: 0px;
+}
+
+table td input {
+  border: 0px;
 }

@@ -5,44 +5,66 @@
   <body>
   
   <form action="submit.php" method="POST">
-    <table>
-      <tr>
-        <td class="question" colspan="2">
-          <p>Nom, prénom</p>
-          <input name="nom" type="text" />
-        </td>
-      </tr>
+    <ol>
+      <li>
+        <p>Nom, prénom</p>
+        <input name="nom" type="text" />
+      </li>
+        
+      <li>
+        <p>Question à reponses multiples</p>
+        <input name="q1rep1" type="hidden" value="off" />
+        <input name="q1rep1" type="checkbox">Reponse 1</input>
+        
+        <input name="q1rep2" type="hidden" value="off" />
+        <input name="q1rep2" type="checkbox">Reponse 2</input>
+        
+        <input name="q1rep3" type="hidden" value="off" />
+        <input name="q1rep3" type="checkbox">Reponse 3</input>
+      </li>
       
-      <tr>
-        <td class="question">
-          <p>Question 1 (QCM)</p>
-          <input name="q1rep1" type="checkbox" text="plop">Reponse 1</input>
-          <input name="q1rep2" type="checkbox">Reponse 2</input>
-        </td>
-        <td class="question">
-          <p>Question 2</p>
-          <select name="question2">
-            <option value="rep1">Reponse 1</option>
-            <option value="rep2">Reponse 2</option>
-          </select>
-        </td>
-      </tr>
+      <li>
+        <p>Question a reponse unique</p>
+        <input type="radio" name="question3" value="rep1">Reponse 1</input>
+        <input type="radio" name="question3" value="rep2">Reponse 2</input>
+        <input type="radio" name="question3" value="rep3">Reponse 3</input>
+      </li>
       
-      <tr>
-        <td class="question">
-          <p>Question 3 (Une seule reponses)</p>
-          <input type="radio" name="question3" value="rep1">Reponse 1</input>
-          <input type="radio" name="question3" value="rep2">Reponse 2</input>
-          <input type="radio" name="question3" value="rep3">Reponse 3</input>
-        </td>
-        <td class="question">
-          <p>Question 4 (Une seule reponses)</p>
-          <input type="radio" name="question4" value="rep1">Reponse 1</input>
-          <input type="radio" name="question4" value="rep2">Reponse 2</input>
-          <input type="radio" name="question4" value="rep3">Reponse 3</input>
-        </td>
-      </tr>
-    </table>
+      <li>
+        <p>Intitulé de la question</p>
+        <table>
+          <tr>
+            <td></td>
+            <td>Colonne 1</td>
+            <td>Colonne 2</td>
+            <td>Colonne 3</td>
+          </tr>
+          
+          <tr>
+            <td style="background:green">Ligne 1</td>
+            <td><input name="table11" type="text" /></td>
+            <td><input name="table12" type="text" /></td>
+            <td><input name="table13" type="text" /></td>
+          </tr>
+          
+          <tr>
+            <td style="background:orange">Ligne 2</td>
+            <td><input name="table21" type="text" /></td>
+            <td><input name="table22" type="text" /></td>
+            <td><input name="table23" type="text" /></td>
+          </tr>
+          
+          <tr>
+            <td style="background:red">Ligne 3</td>
+            <td><input name="table31" type="text" /></td>
+            <td><input name="table32" type="text" /></td>
+            <td><input name="table33" type="text" /></td>
+          </tr>
+        </table>
+      </li>
+      
+    </ol>
+
     <button type="submit">Valider</button>
   </form>
 
