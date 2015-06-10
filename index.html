@@ -1,4 +1,4 @@
-<html>
+﻿<html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
@@ -7,32 +7,62 @@
   <form action="submit.php" method="POST">
     <ol>
       <li>
-        <p>Nom, pr�nom</p>
-        <input name="nom" type="text" />
+        <p>Nom, prénom</p>
+        <input name="nom" type="text" placeholder="Entrez votre nom"/>
       </li>
         
       <li>
-        <p>Question � reponses multiples</p>
+        <p>Question réponses multiples</p>
+        
         <input name="q1rep1" type="hidden" value="off" />
-        <input name="q1rep1" type="checkbox">Reponse 1</input>
-        
         <input name="q1rep2" type="hidden" value="off" />
-        <input name="q1rep2" type="checkbox">Reponse 2</input>
-        
         <input name="q1rep3" type="hidden" value="off" />
-        <input name="q1rep3" type="checkbox">Reponse 3</input>
+        
+        <label>
+          <div class="reponse">
+            <input name="q1rep1" type="checkbox">Réponse 1</input>
+          </div>
+        </label>
+        
+        <label>
+          <div class="reponse">
+            <input name="q1rep2" type="checkbox">Réponse 2</input>
+          </div>
+        </label>
+        
+        <label>
+          <div class="reponse">
+            <input name="q1rep3" type="checkbox">Réponse 3</input>
+          </div>
+        </label>
       </li>
       
       <li>
-        <p>Question a reponse unique</p>
-        <input type="radio" name="question3" value="rep1">Reponse 1</input>
-        <input type="radio" name="question3" value="rep2">Reponse 2</input>
-        <input type="radio" name="question3" value="rep3">Reponse 3</input>
+        <p>Question a réponse unique</p>
+        
+        <label>
+          <div class="reponse">
+            <input type="radio" name="question2" value="rep1">Réponse 1</input>
+          </div>
+        </label>
+        
+        <label>
+          <div class="reponse">
+            <input type="radio" name="question2" value="rep2">Réponse 2</input>
+          </div>
+        </label>
+        
+        <label>
+          <div class="reponse">
+            <input type="radio" name="question2" value="rep3">Réponse 3</input>
+          </div>
+        </label>
+        
       </li>
       
       <li>
-        <p>Intitul� de la question</p>
-        <table>
+        <p>Tableau de réponses</p>
+        <table class="text">
           <tr>
             <td></td>
             <td>Colonne 1</td>
@@ -41,24 +71,121 @@
           </tr>
           
           <tr>
-            <td style="background:green">Ligne 1</td>
-            <td><input name="table11" type="text" /></td>
-            <td><input name="table12" type="text" /></td>
-            <td><input name="table13" type="text" /></td>
+            <td class="ok">Ligne 1</td>
+            <td><input name="table11" type="text"/></td>
+            <td><input name="table12" type="text"/></td>
+            <td><input name="table13" type="text"/></td>
           </tr>
           
           <tr>
-            <td style="background:orange">Ligne 2</td>
-            <td><input name="table21" type="text" /></td>
-            <td><input name="table22" type="text" /></td>
-            <td><input name="table23" type="text" /></td>
+            <td class="warning">Ligne 2</td>
+            <td><input name="table21" type="text"/></td>
+            <td><input name="table22" type="text"/></td>
+            <td><input name="table23" type="text"/></td>
           </tr>
           
           <tr>
-            <td style="background:red">Ligne 3</td>
+            <td class="urgent">Ligne 3</td>
             <td><input name="table31" type="text" /></td>
             <td><input name="table32" type="text" /></td>
             <td><input name="table33" type="text" /></td>
+          </tr>
+          
+        </table>
+      </li>
+      
+      <li>
+        <p>Réponses nombreuses</p>
+
+        <input name="q5rep1" type="hidden" value="off" />
+
+        <input name="q5rep1" type="hidden" value="off" />
+        <input name="q5rep2" type="hidden" value="off" />
+        <input name="q5rep3" type="hidden" value="off" />
+        <input name="q5rep4" type="hidden" value="off" />
+        <input name="q5rep5" type="hidden" value="off" />
+        <input name="q5rep6" type="hidden" value="off" />
+        <input name="q5rep7" type="hidden" value="off" />
+        <input name="q5rep8" type="hidden" value="off" />
+        <input name="q5rep9" type="hidden" value="off" />
+        
+        <table class="checkbox">
+          <tr>
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep1" type="checkbox">Réponse 1</input>
+                </div>
+              </label>
+            </td>
+            
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep2" type="checkbox">Réponse 2</input>
+                </div>
+              </label>
+            </td>
+            
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep3" type="checkbox">Réponse 3</input>
+                </div>
+              </label>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep4" type="checkbox">Réponse 4</input>
+                </div>
+              </label>
+            </td>
+            
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep5" type="checkbox">Réponse 5</input>
+                </div>
+              </label>
+            </td>
+            
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep6" type="checkbox">Réponse 6</input>
+                </div>
+              </label>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep7" type="checkbox">Réponse 7</input>
+                </div>
+              </label>
+            </td>
+            
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep8" type="checkbox">Réponse 8</input>
+                </div>
+              </label>
+            </td>
+            
+            <td>
+              <label>
+                <div>
+                  <input name="q5rep9" type="checkbox">Réponse 9</input>
+                </div>
+              </label>
+            </td>
           </tr>
         </table>
       </li>

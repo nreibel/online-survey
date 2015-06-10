@@ -1,12 +1,57 @@
-table {
-    border-collapse: collapse;
+div.reponse {
+  padding: 5px;
 }
 
-table td {
+div.reponse:hover {
+  background: beige;
+}
+
+table.text {
+  border-collapse: collapse;
+}
+
+table.text td {
   border: solid 1px lightgrey;
   margin: 0px;
 }
 
-table td input {
-  border: 0px;
+table.text td input {
+  width: 100%;
+  margin: 0px;
+  padding: 3px;
+  border: none;
+}
+
+table.text td input:hover {
+  background: beige;
+}
+
+table.text td.ok {
+  background: lightgreen;
+  border: none;
+}
+
+table.text td.warning {
+  background: orange;
+  border: none;
+}
+
+table.text td.urgent {
+  background: red;
+  border: none;
+}
+
+table.checkbox {
+  border-spacing: 2px;
+}
+
+table.checkbox td {
+  border: solid 1px white;
+  border-radius: 3px;
+  padding: 3px 5px 3px 5px;
+}
+
+table.checkbox td:hover {
+  background: beige;
+  border: solid 1px lightgrey;
 }
