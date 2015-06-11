@@ -28,17 +28,14 @@ table.text td input:hover {
 
 table.text td.ok {
   background: lightgreen;
-  border: none;
 }
 
 table.text td.warning {
   background: orange;
-  border: none;
 }
 
 table.text td.urgent {
   background: red;
-  border: none;
 }
 
 table.checkbox {
