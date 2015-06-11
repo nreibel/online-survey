@@ -1,6 +1,6 @@
 <?php
 
-  $myfile = fopen("results.csv", "a+") or die("Can't open file");
+  $myfile = fopen("data/results.csv", "a+") or die("Can't open file");
 
   fwrite($myfile,  $_SERVER['REMOTE_ADDR'] . ';');
   fwrite($myfile,  date('H:i:s d-m-y') . ';');
