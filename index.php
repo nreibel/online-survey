@@ -27,6 +27,11 @@
         </li>
 
         <li>
+          <p>Notation</p>
+          <?php rating(5, 'rating') ?>
+        </li>
+
+        <li>
           <p>Tableau de réponses</p>
           <table class="text">
             <tr>

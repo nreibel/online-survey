@@ -2,7 +2,7 @@
 
 $id = 0;
 
-function checkbox($text, $class) {
+function checkbox($text, $class = null) {
 
   $currentId = $GLOBALS['id'];
 
@@ -21,7 +21,7 @@ EOS;
 
 }
   
-function radiobutton($name, $value, $text, $class) {
+function radiobutton($name, $value, $text, $class = null) {
   
   print <<<EOS
 
@@ -34,8 +34,20 @@ function radiobutton($name, $value, $text, $class) {
 EOS;
 
 }
+
+function rating($max, $name, $class = null) {
+  for($i = 1 ; $i <= $max ; $i++) {
+    print <<<EOS
+
+<label>
+  <input type="radio" class="$class" value="$i" name="$name">$i</input>
+</label>
+
+EOS;
+  }
+}
   
-function text($placeholder) {
+function text($placeholder = null) {
 
   $currentId = $GLOBALS['id'];
   
