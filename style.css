@@ -1,54 +1,63 @@
-div.reponse {
-  padding: 5px;
+li {
+  margin-top: 50px;
 }
 
-div.reponse:hover {
+.padded {
+  padding: 0 10 0 10;
+}
+
+.inline {
+  display: inline;
+}
+
+div.reponse {
+  padding: 3px;
+}
+
+.reponse:hover {
   background: beige;
 }
 
-table.text {
+table {
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-table.text td {
+td {
   border: solid 1px lightgrey;
   margin: 0px;
+  padding: 0px;
 }
 
-table.text td input {
+table#signes_cliniques {
+  border: 0px solid black;
+}
+
+table#signes_cliniques td {
+  border: 0px solid black;
+  padding-right: 100px;
+}
+
+table#traitements td.title {
+  width: 100px;
+  text-align: center;
+}
+
+table#traitements td input {
   width: 100%;
   margin: 0px;
-  padding: 3px;
+  padding: 0px;
   border: none;
 }
 
-table.text td input:hover {
-  background: beige;
-}
-
-table.text td.ok {
+table td.grade_1 {
   background: lightgreen;
 }
 
-table.text td.warning {
+table td.grade_2 {
   background: orange;
 }
 
-table.text td.urgent {
+table td.grade_3 {
   background: red;
-}
-
-table.checkbox {
-  border-spacing: 2px;
-}
-
-table.checkbox td {
-  border: solid 1px white;
-  border-radius: 3px;
-  padding: 3px 5px 3px 5px;
-}
-
-table.checkbox td:hover {
-  background: beige;
-  border: solid 1px lightgrey;
 }
