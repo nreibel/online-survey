@@ -1,13 +1,43 @@
 li {
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+div#title {
+  text-align: center;
+  padding: 20px 50px 50px 50px;
+}
+
+div.logo {
+  width: 100%;
+  height: 150px;
+}
+
+div.logo img {
+  height: 100%;
+}
+
+img#unistra {
+  float: right;
+}
+
+img#uds {
+  float: left;
 }
 
 .padded {
-  padding: 0 10 0 10;
+  padding: 2 10 2 10;
 }
 
 .inline {
   display: inline;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  text-align: center;
 }
 
 div.reponse {
@@ -18,46 +48,59 @@ div.reponse {
   background: beige;
 }
 
-table {
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-td {
-  border: solid 1px lightgrey;
-  margin: 0px;
-  padding: 0px;
-}
-
-table#signes_cliniques {
-  border: 0px solid black;
-}
-
-table#signes_cliniques td {
-  border: 0px solid black;
-  padding-right: 100px;
-}
-
-table#traitements td.title {
-  width: 100px;
-  text-align: center;
-}
-
-table#traitements td input {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  border: none;
-}
-
-table td.grade_1 {
+.grade_1 {
   background: lightgreen;
 }
 
-table td.grade_2 {
+.grade_2 {
   background: orange;
 }
 
-table td.grade_3 {
+.grade_3 {
   background: red;
+}
+
+.border {
+	border: solid 1px lightgray;
+}
+
+.border td {
+	border: solid 1px lightgray;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table.cb_table td input {
+  width: 100%;
+  border: none;
+}
+
+table.txt_table td input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+table#traitements1 {
+  margin-bottom: 20px;
+}
+
+table#traitements1 td.title {
+  width: 100px;
+}
+
+table#traitements2 td.title {
+  width: 150px;
+}
+
+table#signes_cliniques td {
+  padding-right: 100px;
+}
+
+table#bilan_bio td {
+  padding-left: 5px;
+  padding-right: 50px;
 }

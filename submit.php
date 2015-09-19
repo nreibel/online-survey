@@ -12,5 +12,5 @@
   fwrite($myfile, "\n");
   fclose($myfile);
   
-  print "OK";
+  header('Location: thanks.html');
 ?>

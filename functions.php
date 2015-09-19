@@ -21,7 +21,7 @@ EOS;
 
 }
   
-function radiobutton($name, $value, $text, $class = null) {
+function radiobutton($name, $value, $text = "", $class = null) {
   
   print <<<EOS
 
@@ -31,6 +31,14 @@ function radiobutton($name, $value, $text, $class = null) {
   </div>
 </label>
 
+EOS;
+
+}
+
+function null_radiobutton($name) {
+  
+  print <<<EOS
+    <input type="radio" name="$name" value="null" class="hidden" checked="checked" />
 EOS;
 
 }
