@@ -1,3 +1,0 @@
-You need to give www-data the permission to write in this folder :
-
-sudo chown www-data .
