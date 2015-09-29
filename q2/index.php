@@ -3,7 +3,9 @@
     <meta charset="UTF-8">
 	<title>Anaphylaxie - Médecine générale</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
-     <?php require('../functions.php') ?>
+     <?php
+       require_once('../includes/functions.php');
+     ?>
   </head>
   <body>
   
@@ -203,7 +205,7 @@
 		
         <li>
           <p>Quels traitements de première intention instaurez-vous en fonction du grade (classification de Ring et Messmer) ? :</p>
-          <table id="traitements1" class="border cb_table">
+          <table id="traitements1" class="border center_input">
             <tr>
               <td class="padded" rowspan=2">Symptômes</td>
               <td class="title center" colspan="6">Traitements de première intention</td>
@@ -347,7 +349,7 @@
     
 		<li>
 		  <p>Quels traitements mettez-vous en place en cas de :</p>
-			<table id="traitements2" class="border cb_table">
+			<table id="traitements2" class="border center_input">
 				<tr>
 					<td></td>
 					<td class="padded center title">Stridor surajouté</td>

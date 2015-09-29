@@ -72,7 +72,7 @@ table {
   border-collapse: collapse;
 }
 
-table.cb_table td input {
+table.center_input td input {
   width: 100%;
   border: none;
 }
