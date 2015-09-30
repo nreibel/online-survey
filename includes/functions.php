@@ -2,55 +2,20 @@
 
 $id = 0;
 
-function checkbox($text = '', $class = null) {
-
-  $currentId = $GLOBALS['id'];
-
-  print <<<EOS
-
-<input name="cb_$currentId" type="hidden" value="off" />
-<label class="$class">
-  <div class="$class">
-    <input name="cb_$currentId" type="checkbox">$text</input>
-  </div>
-</label>
-
-EOS;
-
-  $GLOBALS['id']++;
-
-}
-  
-function radiobutton($name, $value, $text = "", $class = null) {
-  
-  print <<<EOS
-
-<label class="$class">
-  <div class="$class">
-    <input type="radio" name="$name" value="$value">$text</input>
-  </div>
-</label>
-
-EOS;
-
+function checkbox($text = null, $class = null) {
+  $currentId = $GLOBALS['id']++;
+  $format = '<input name="cb_%d" type="hidden" value="off" /><label%s><input name="cb_%d" type="checkbox" />%s</label>';  
+  printf($format,
+    $currentId,
+    ($class != null ? " class=\"$class\"" : ''),
+    $currentId,
+    ($text != null ? "<span>$text</span>" : "")
+  );
 }
 
-function null_radiobutton($name) {
-  
-  print <<<EOS
-    <input type="radio" name="$name" value="null" class="hidden" checked="checked" />
-EOS;
-
+function text() {
+  $currentId = $GLOBALS['id']++;
+  printf('<input name="tf_%d" type="text"/>', $currentId);
 }
-  
-function text($placeholder = null) {
 
-  $currentId = $GLOBALS['id'];
-  
-  print <<<EOS
-<input name="tf_$currentId" type="text" placeholder="$placeholder"/>
-EOS;
-
-  $GLOBALS['id']++;
-}
 ?>

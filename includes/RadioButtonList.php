@@ -21,17 +21,21 @@ class RadioButtonList {
   }
   
   public function print_html() {
+    print "\n";
     foreach ($this->items as $el) {
       print $el->to_html() . "\n";
     }
-    print $this->generate_dummy()->to_html() . "\n";
+    print $this->generate_dummy()->to_html();
+    print "\n\n";
   }
   
   public function print_td() {
+    print "\n";
     foreach ($this->items as $el) {
-      print "<td>" . $el->to_html() . "</td>\n";
+      print '<td>' . $el->to_html() . "</td>\n";
     }
-    print "<td class=\"hidden\">" . $this->generate_dummy()->to_html() . "</td>\n";
+    print '<td class="hidden">' . $this->generate_dummy()->to_html() . '</td>';
+    print "\n\n";
   }
 }
 
@@ -55,14 +59,12 @@ class RadioButton {
     $classStr = ($this->clazz != null ? " class=\"$this->clazz\"" : "");
     
     $str = "<label$classStr>";
-    $str .= "<div$classStr>";
-    $str .= "<input type=\"radio\" name=\"$this->name\" value=\"$this->value\"";
-    if ($this->checked) $str .= " checked=\"checked\"";
+    $str .= '<input type="radio" name="' . $this->name . '" value="' . $this->value . '"';
+    if ($this->checked) $str .= ' checked="checked"';
+    $str .= '/>';
     
-    if ($this->text != null) $str .= ">$this->text</input>";
-    else $str .= "/>";
+    if ($this->text != null) $str .= '<span>' . $this->text . '</span>';
     
-    $str .= "</div>";
     $str .= "</label>";
     
     return $str;
