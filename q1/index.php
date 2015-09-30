@@ -120,6 +120,7 @@
                   checkbox('Désaturation',                 'reponse block');
                 ?>
               </td>
+              <td class="spacer"/>
               <td>
                 <?php
                   checkbox('Hypotension artérielle',    'reponse block');

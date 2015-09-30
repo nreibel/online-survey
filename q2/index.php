@@ -551,9 +551,9 @@
           <table class="border txt">
             <tr>
               <td></td>
-              <td class="padded title">Anti-histaminiques</td>
-              <td class="padded title">Corticothérapie</td>
-              <td class="padded title">Adrénaline IM</td>
+              <td class="padded title center">Anti-histaminiques</td>
+              <td class="padded title center">Corticothérapie</td>
+              <td class="padded title center">Adrénaline IM</td>
             </tr>
             <tr>
               <td class="padded grade_1">Grade I</td>
