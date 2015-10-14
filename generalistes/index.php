@@ -81,6 +81,8 @@
           <?php
             checkbox('SFAR (Société Française d’Anesthésie et de Réanimation)',      'reponse block');
             checkbox('NICE (National Institute for Health and Care Excellence, UK)', 'reponse block');
+            checkbox('HAS (Haute Autorité de Santé)',                                'reponse block');
+            checkbox('European Resuscitation Council',                               'reponse block');
             checkbox('EAACI (European Academy of Allergy and Clinical Immunology)',  'reponse block');
             checkbox('AAAAI (American Academy of Allergy Asthma and Immunology)',    'reponse block');
             checkbox('WAO (World Allergy Organization)',                             'reponse block');
@@ -92,7 +94,7 @@
           <p>Quelle classification de l’anaphylaxie utilisez-vous ?</p>
           <?php
             checkbox('Ring et Messmer', 'reponse block');
-            checkbox('Gell et Coombs',  'reponse block');
+            checkbox('Mueller',  'reponse block');
           ?>
           <div>Autres :&nbsp;<?php text() ?></div>
         </li>
@@ -370,7 +372,7 @@
           <?php
             checkbox('Corticoïdes per os sur une courte durée. Quelle dose (mg/j)?&nbsp;', 'reponse'); text();
             checkbox('Beta2-mimétiques en inhalation',      'reponse block');
-            checkbox('Anti-leucotriènes en inhalation',     'reponse block');
+            checkbox('Anti-leucotriènes',                   'reponse block');
             checkbox('Anti-histaminiques',                  'reponse block');
             checkbox('Stylos auto-injecteurs d’adrénaline', 'reponse block');
           ?>

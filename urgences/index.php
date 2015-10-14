@@ -37,6 +37,9 @@
             checkbox('CHU',  'reponse block');
             checkbox('CHR',  'reponse block');
             checkbox('CH',   'reponse block');
+          ?>
+          <p/>
+          <?php
             checkbox('SAMU', 'reponse block');
             checkbox('SMUR', 'reponse block');
             checkbox('SAU',  'reponse block');
