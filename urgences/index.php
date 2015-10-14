@@ -39,6 +39,7 @@
             checkbox('CH',   'reponse block');
             checkbox('SAMU', 'reponse block');
             checkbox('SMUR', 'reponse block');
+            checkbox('SAU',  'reponse block');
           ?>
         </li>
         
@@ -93,7 +94,7 @@
           <p>Quelle classification de l’anaphylaxie utilisez-vous ?</p>
           <?php
             checkbox('Ring et Messmer', 'reponse block');
-            checkbox('Gell et Coombs',  'reponse block');
+            checkbox('Mueller',  'reponse block');
           ?>
           <div>Autres :&nbsp;<?php text() ?></div>
         </li>
