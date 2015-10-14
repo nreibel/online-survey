@@ -97,7 +97,7 @@
           <p>Quelle classification de l’anaphylaxie utilisez-vous ?</p>
           <?php
             checkbox('Ring et Messmer', 'reponse block');
-            checkbox('Mueller',  'reponse block');
+            checkbox('Müller',  'reponse block');
           ?>
           <div>Autres :&nbsp;<?php text() ?></div>
         </li>
