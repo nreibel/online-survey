@@ -11,5 +11,5 @@
   fwrite($myfile, "\n");
   fclose($myfile);
   
-  header('Location: /online-survey/thanks.html');
+  header('Location: ../thanks.html');
 ?>
