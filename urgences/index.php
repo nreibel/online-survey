@@ -231,28 +231,6 @@
         </li>
     
         <li>
-          <p>Gardez-vous le patient en surveillance après avoir stabilisé son état clinique et si oui, combien de temps (heures) ?</p>
-          <table class="border txt">
-            <tr>
-              <td></td>
-              <td class="title center">Temps de surveillance</td>
-            </tr>
-            <tr>
-              <td class="padded grade_1">Grade I</td>
-              <td><?php text() ?></td>
-            </tr>
-            <tr>
-              <td class="padded grade_2">Grade II</td>
-              <td><?php text() ?></td>
-            </tr>
-            <tr>
-              <td class="padded grade_3">Grade III</td>
-              <td><?php text() ?></td>
-            </tr>
-          </table>
-        </li>
-    
-        <li>
           <p>Quels traitements de première intention instaurez-vous en fonction du grade (classification de Ring et Messmer) ? :</p>
           <table id="traitements1" class="border cb">
             <tr>
@@ -532,6 +510,28 @@
           </table>
 
         </li>
+    
+        <li>
+          <p>Gardez-vous le patient en surveillance après avoir stabilisé son état clinique et si oui, combien de temps (heures) ?</p>
+          <table class="border txt">
+            <tr>
+              <td></td>
+              <td class="title center">Temps de surveillance</td>
+            </tr>
+            <tr>
+              <td class="padded grade_1">Grade I</td>
+              <td><?php text() ?></td>
+            </tr>
+            <tr>
+              <td class="padded grade_2">Grade II</td>
+              <td><?php text() ?></td>
+            </tr>
+            <tr>
+              <td class="padded grade_3">Grade III</td>
+              <td><?php text() ?></td>
+            </tr>
+          </table>
+        </li>
   
         <li>
           <p>Prévoyez-vous une consultation en allergologie à distance ?</p>
@@ -549,15 +549,15 @@
           <?php
             $rbl = new RadioButtonList();
             $rbl->add_radiobutton('non', 'Non', 'reponse block');
-            $rbl->add_radiobutton('oui', 'En fonction du grade (Classification de Ring et Messmer) : Dosage ? (mg/j)', 'reponse block');
+            $rbl->add_radiobutton('oui', 'En fonction du grade (Classification de Ring et Messmer) : Dosage ?', 'reponse block');
             $rbl->print_html();
           ?>
           <table class="border txt">
             <tr>
               <td></td>
-              <td class="padded title center">Anti-histaminiques</td>
-              <td class="padded title center">Corticothérapie</td>
-              <td class="padded title center">Adrénaline IM</td>
+              <td class="padded title center">Anti-histaminiques (mg/j)</td>
+              <td class="padded title center">Corticothérapie (mg/j)</td>
+              <td class="padded title center">Adrénaline IM (oui/non)</td>
             </tr>
             <tr>
               <td class="padded grade_1">Grade I</td>
