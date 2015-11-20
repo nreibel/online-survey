@@ -50,9 +50,9 @@
           <p>Depuis combien de temps exercez-vous ?</p>
           <?php
             $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('0-5',   '0-5 ans',   'reponse block');
-            $rbl->add_radiobutton('6-10',  '6-10 ans',  'reponse block');
-            $rbl->add_radiobutton('11-20', '11-20 ans', 'reponse block');
+            $rbl->add_radiobutton('0>5',   '0-5 ans',   'reponse block');
+            $rbl->add_radiobutton('6>10',  '6-10 ans',  'reponse block');
+            $rbl->add_radiobutton('11>20', '11-20 ans', 'reponse block');
             $rbl->add_radiobutton('20+',   '>20 ans',   'reponse block');
             $rbl->print_html();
           ?>
@@ -72,9 +72,9 @@
           <p>À combien de cas d’anaphylaxie nécessitant un traitement en urgence et une surveillance rapprochée estimez-vous être confronté chaque année ?</p>
           <?php
             $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('0-5',   '0-5',   'reponse block');
-            $rbl->add_radiobutton('6-10',  '6-10',  'reponse block');
-            $rbl->add_radiobutton('11-15', '11-15', 'reponse block');
+            $rbl->add_radiobutton('0>5',   '0-5',   'reponse block');
+            $rbl->add_radiobutton('6>10',  '6-10',  'reponse block');
+            $rbl->add_radiobutton('11>15', '11-15', 'reponse block');
             $rbl->add_radiobutton('15+',   '>15',   'reponse block');
             $rbl->print_html();
           ?>
