@@ -167,14 +167,6 @@
             $rbl->add_radiobutton('non', 'Non', 'reponse');
             $rbl->print_html();
           ?>
-      
-          <p>Si oui, lequel ?</p>
-          <?php
-            checkbox('Tryptase sérique',      'reponse block');
-            checkbox('Histamine plasmatique', 'reponse block');
-            checkbox('IgE spécifiques',       'reponse block');
-          ?>
-          <div>Autres :&nbsp;<?php text() ?></div>
         </li>
         
         <li>
