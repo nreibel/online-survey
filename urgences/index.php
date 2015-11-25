@@ -28,8 +28,8 @@
           <?php
             checkbox('Urgentiste', 'reponse block');
             checkbox('Anesthésiste-réanimateur', 'reponse block');
-            checkbox('Autres', 'reponse block');
           ?>
+          <div>Autre :&nbsp;<?php text() ?></div>
         </li>
 
         <li>
