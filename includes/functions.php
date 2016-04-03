@@ -18,4 +18,9 @@ function text() {
   printf('<input name="tf_%d" type="text"/>', $currentId);
 }
 
+function text_area($rows = 4, $cols = 50) {
+  $currentId = $GLOBALS['id']++;
+  printf('<textarea rows="%d" cols="%d" name="ta_%d"></textarea>', $rows, $cols, $currentId);
+}
+
 ?>

@@ -17,45 +17,14 @@
     </div>
 
     <div id="title">
-      <h2>QUESTIONNAIRE SUR LA PRISE EN CHARGE DES ANAPHYLAXIES EN MÉDECINE GÉNÉRALE</h2>
+      <h2>étude sur le savoir déclaratif opérant de prise en charge de l'anaphylaxie dans une population d'internes de médecine générale</h2>
     </div>
 
     <form action="submit.php" method="post">
       <ol>
 
         <li>
-          <p>Dans quelle structure exercez-vous ?</p>
-          <?php
-            $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('cabinet', 'Cabinet libéral',               'reponse block');
-            $rbl->add_radiobutton('assoc',   'Maison médicale / association', 'reponse block');
-            $rbl->print_html();
-          ?>
-        </li>
-
-        <li>
-          <p>Où exercez-vous ?</p>
-          <?php
-            checkbox('Milieu rural',      'reponse block');
-            checkbox('Milieu semi-rural', 'reponse block');
-            checkbox('Ville',             'reponse block');
-          ?>
-        </li>
-
-        <li>
-          <p>Depuis combien de temps exercez-vous ?</p>
-          <?php
-            $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('0-5',   '0-5 ans',   'reponse block');
-            $rbl->add_radiobutton('6-10',  '6-10 ans',  'reponse block');
-            $rbl->add_radiobutton('11-20', '11-20 ans', 'reponse block');
-            $rbl->add_radiobutton('20+',   '>20 ans',   'reponse block');
-            $rbl->print_html();
-          ?>
-        </li>
-
-        <li>
-          <p>Etes-vous :</p>
+          <p>Êtes-vous :</p>
           <?php
             $rbl = new RadioButtonList();
             $rbl->add_radiobutton('m', 'Un homme',  'reponse block');
@@ -63,80 +32,106 @@
             $rbl->print_html();
           ?>
         </li>
-        
+
         <li>
-          <p>À combien de cas d’anaphylaxie nécessitant un traitement en urgence et une surveillance rapprochée estimez-vous être confronté chaque année ?</p>
+          <p>En quel semestre d'internat êtes-vous actuellement ?</p>
           <?php
             $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('0-5',   '0-5',   'reponse block');
-            $rbl->add_radiobutton('6-10',  '6-10',  'reponse block');
-            $rbl->add_radiobutton('11-15', '11-15', 'reponse block');
-            $rbl->add_radiobutton('15+',   '>15',   'reponse block');
+            $rbl->add_radiobutton('1', '1er semestre',  'reponse block');
+            $rbl->add_radiobutton('2', '2ème semestre', 'reponse block');
+            $rbl->add_radiobutton('3', '3ème semestre', 'reponse block');
+            $rbl->add_radiobutton('4', '4ème semestre', 'reponse block');
+            $rbl->add_radiobutton('5', '5ème semestre', 'reponse block');
+            $rbl->add_radiobutton('6', '6ème semestre', 'reponse block');
             $rbl->print_html();
           ?>
         </li>
-    
+        
         <li>
-          <p>Connaissez-vous les recommandations de prise en charge :</p>
+          <p>Avez-vous déjà effectué votre stage chez le praticien ?</p>
           <?php
-            checkbox('SFAR (Société Française d’Anesthésie et de Réanimation)',      'reponse block');
-            checkbox('NICE (National Institute for Health and Care Excellence, UK)', 'reponse block');
-            checkbox('HAS (Haute Autorité de Santé)',                                'reponse block');
-            checkbox('European Resuscitation Council',                               'reponse block');
-            checkbox('EAACI (European Academy of Allergy and Clinical Immunology)',  'reponse block');
-            checkbox('AAAAI (American Academy of Allergy Asthma and Immunology)',    'reponse block');
-            checkbox('WAO (World Allergy Organization)',                             'reponse block');
+            $rbl = new RadioButtonList();
+            $rbl->add_radiobutton('oui', 'Oui', 'reponse');
+            $rbl->add_radiobutton('non', 'Non', 'reponse');
+            $rbl->print_html();
           ?>
-          <div>Autres :&nbsp;<?php text() ?></div>
         </li>
         
         <li>
-          <p>Quelle classification de l’anaphylaxie utilisez-vous ?</p>
+          <p>Envisagez-vous d'exercer :</p>
           <?php
-            checkbox('Ring et Messmer', 'reponse block');
-            checkbox('Müller',  'reponse block');
+            checkbox('En libéral'           , 'reponse block');
+            checkbox('En milieu rural'      , 'reponse block');
+            checkbox('En milieu semi-rural' , 'reponse block');
+            checkbox('En milieu urbain'     , 'reponse block');
+            checkbox('En milieu hospitalier. Quelle spécialité ?', 'reponse');
           ?>
-          <div>Autres :&nbsp;<?php text() ?></div>
+          &nbsp;
+          <?php text(); ?>
         </li>
-    
+        
         <li>
-          <p>En cas de suspicion d’allergie, quels signes cliniques vous orientent vers une anaphylaxie ?</p>
+          <p>Vous estimez-vous bien formé pour prendre en charge des patients allergiques et/ou une anaphylaxie?</p>
+          <?php
+            $rbl = new RadioButtonList();
+            $rbl->add_radiobutton('Très bien',   'Très bien',   'reponse block');
+            $rbl->add_radiobutton('Bien',        'Bien',        'reponse block');
+            $rbl->add_radiobutton('Insuffisant', 'Insuffisant', 'reponse block');
+            $rbl->add_radiobutton('Pas du tout', 'Pas du tout', 'reponse block');
+            $rbl->print_html();
+          ?>
+        </li>
+      
+        <li>
+          <p>Connaissez-vous des recommandations de prise en charge ?</p>
+          <?php
+            $rbl = new RadioButtonList();
+            $rbl->add_radiobutton('non', 'Non', 'reponse');
+            $rbl->add_radiobutton('oui', 'Oui : lesquelles ? ', 'reponse');
+            $rbl->print_html();
+          ?>
+          &nbsp;
+          <?php text() ?>
+        </li>
+      
+        <li>
+          <p>Connaissez-vous une classification de l'anaphylaxie ?</p>
+          <?php
+            $rbl = new RadioButtonList();
+            $rbl->add_radiobutton('non', 'Non', 'reponse');
+            $rbl->add_radiobutton('oui', 'Oui : lesquelles ? ', 'reponse');
+            $rbl->print_html();
+          ?>
+          &nbsp;
+          <?php text() ?>
+        </li>
+        
+        <li>
+          <p>En cas de suspicion de réaction allergique, quels signes cliniques vous amènent à transférer le patient en urgence en milieu hospitalier ?</p>
           <table id="signes_cliniques">
             <tr>
               <td>
                 <?php
-                  checkbox('Urticaire',                    'reponse block');
-                  checkbox('Prurit',                       'reponse block');
-                  checkbox('Rhinite',                      'reponse block');
-                  checkbox('Conjonctivite',                'reponse block');
-                  checkbox('Erythème',                     'reponse block');
-                  checkbox('Œdème de la face',             'reponse block');
-                  checkbox('Œdème du tronc',               'reponse block');
-                  checkbox('Œdème des membres inférieurs', 'reponse block');
-                  checkbox('Œdème des membres supérieurs', 'reponse block');
-                  checkbox('Œdème de Quincke',             'reponse block');
-                  checkbox('Essoufflement',                'reponse block');
-                  checkbox('Toux',                         'reponse block');
-                  checkbox('Hyper-réactivité bronchique',  'reponse block');
-                  checkbox('Bronchospasme / asthme',       'reponse block');
-                  checkbox('Désaturation',                 'reponse block');
+                  checkbox('Signes cutanéo-muqueux isolés', 'reponse block');
+                  checkbox('Œdème de Quincke',              'reponse block');
+                  checkbox('Toux',                          'reponse block');
+                  checkbox('Dyspnée',                       'reponse block');
+                  checkbox('Hyper-réactivité bronchique',   'reponse block');
+                  checkbox('Bronchospasme / asthme',        'reponse block');
+                  checkbox('Désaturation',                  'reponse block');
+                  checkbox('Hypotension légère',            'reponse block');
+                  checkbox('Dysphagie haute',               'reponse block');
                 ?>
               </td>
               <td class="spacer"/>
               <td>
                 <?php
-                  checkbox('Hypotension artérielle',    'reponse block');
-                  checkbox('Syncope',                   'reponse block');
-                  checkbox('Hypersialorrhée',           'reponse block');
-                  checkbox('Myalgies',                  'reponse block');
-                  checkbox('Dysphagie',                 'reponse block');
                   checkbox('Dysphonie',                 'reponse block');
                   checkbox('Bradycardie',               'reponse block');
                   checkbox('Troubles du rythme',        'reponse block');
                   checkbox('Tachycardie',               'reponse block');
                   checkbox('Troubles de la conscience', 'reponse block');
-                  checkbox('Nausées',                   'reponse block');
-                  checkbox('Vomissements',              'reponse block');
+                  checkbox('Nausées, vomissements',     'reponse block');
                   checkbox('Douleurs abdominales',      'reponse block');
                   checkbox('Diarrhées',                 'reponse block');
                   checkbox('Etat de choc',              'reponse block');
@@ -146,35 +141,6 @@
           </table>
         </li>
         
-        <li>
-          <p>Disposez-vous d’un protocole de prise en charge des urgences anaphylactiques ?</p>
-          <?php
-            $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('oui', 'Oui', 'reponse');
-            $rbl->add_radiobutton('non', 'Non', 'reponse');
-            $rbl->print_html();
-          ?>
-        </li>
-        
-        <li>
-          <p>Dans quels cas transférez-vous le patient en milieu hospitalier en urgence ?</p>
-          <?php
-            checkbox('Signes cutanéo-muqueux isolés', 'reponse block');
-            checkbox('Atteinte multi-viscérale modérée : Hyper-réactivité bronchique / Toux / Dyspnée / Nausées / Tachycardie / Hypotension légère',  'reponse block');
-            checkbox('Atteinte multi-viscérale sévère : Œdème de Quincke / Bradycardie / Troubles du rythme / Bronchospasme ou asthme / Troubles de la conscience / Vomissements, diarrhées / Etat de Choc',  'reponse block');
-          ?>
-        </li>
-        
-        <li>
-          <p>Demandez-vous un bilan biologique ?</p>
-          <?php
-            $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('oui', 'Oui', 'reponse');
-            $rbl->add_radiobutton('non', 'Non', 'reponse');
-            $rbl->print_html();
-          ?>
-        </li>
-  
         <li>
           <p>Quel traitement de première intention instaurez-vous en fonction du grade (classification de Ring et Messmer) ? :</p>
           <table id="traitements1" class="border cb">
@@ -358,6 +324,18 @@
         </li>
     
         <li>
+          <p>Vous n’hospitalisez pas le patient (pas de signe de gravité). Quels traitements préventifs prescrivez-vous ?</p>
+          <?php
+            checkbox('Corticoïdes per os sur une courte durée', 'reponse block');
+            checkbox('Beta2-mimétiques en inhalation',          'reponse block');
+            checkbox('Anti-leucotriènes',                       'reponse block');
+            checkbox('Anti-histaminiques',                      'reponse block');
+            checkbox('Stylos auto-injecteurs d’adrénaline',    'reponse block');
+          ?>
+          <div>Autres :&nbsp;<?php text() ?></div>
+        </li>
+        
+        <li>
           <p>Prévoyez-vous une consultation en allergologie à distance ?</p>
           <?php
             $rbl = new RadioButtonList();
@@ -368,19 +346,7 @@
         </li>
         
         <li>
-          <p>Si vous n’hospitalisez pas le patient, quels traitements préventifs prescrivez-vous ?</p>
-          <?php
-            checkbox('Corticoïdes per os sur une courte durée. Quelle dose (mg/j)?&nbsp;', 'reponse'); text();
-            checkbox('Beta2-mimétiques en inhalation',      'reponse block');
-            checkbox('Anti-leucotriènes',                   'reponse block');
-            checkbox('Anti-histaminiques',                  'reponse block');
-            checkbox('Stylos auto-injecteurs d’adrénaline', 'reponse block');
-          ?>
-          <div>Autres :&nbsp;<?php text() ?></div>
-        </li>
-        
-        <li>
-          <p>Disposez-vous d’un document à remettre au patient expliquant les symptômes d’anaphylaxie devant le conduire à reconsulter en urgence ou à appeler le 15 ?</p>
+          <p>Avez-vous déjà observé ou assisté à une démonstration d'utilisation d'un stylo auto-injecteur d'adrénaline ?</p>
           <?php
             $rbl = new RadioButtonList();
             $rbl->add_radiobutton('oui', 'Oui', 'reponse');
@@ -390,16 +356,21 @@
         </li>
         
         <li>
-          <p>En cas de prescription de stylos auto-injecteurs d’adrénaline, formez-vous le patient à leur usage ?</p>
+          <p>Connaissez-vous des noms de stylos d'adrénaline ayant l'AMM actuellement ?</p>
           <?php
             $rbl = new RadioButtonList();
-            $rbl->add_radiobutton('oui', 'Oui', 'reponse');
             $rbl->add_radiobutton('non', 'Non', 'reponse');
+            $rbl->add_radiobutton('oui', 'Oui : lesquelles ? ', 'reponse');
             $rbl->print_html();
           ?>
-          <div>Si non : pourquoi ?&nbsp;&nbsp;<?php text() ?></div>
+          &nbsp;
+          <?php text() ?>
         </li>
         
+        <li>
+          <p>Commentaire libre :</p>
+          <?php text_area(4, 50); ?>
+        </li>
       </ol>
       
       <div>
