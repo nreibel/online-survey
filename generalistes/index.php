@@ -7,6 +7,7 @@
     <?php
       require_once('../includes/functions.php');
       require_once('../includes/RadioButtonList.php');
+      require_once('../includes/Select.php');
     ?>
   </head>
   <body>
@@ -17,7 +18,8 @@
     </div>
 
     <div id="title">
-      <h2>étude sur le savoir déclaratif opérant de prise en charge de l'anaphylaxie dans une population d'internes de médecine générale</h2>
+      <h2>PRISE EN CHARGE DE L'ANAPHYLAXIE</h2>
+      <h2 class="sub">Étude sur le savoir déclaratif des internes de médecine générale d'Alsace et de Lorraine</h2>
     </div>
 
     <form action="submit.php" method="post">
@@ -143,177 +145,83 @@
         
         <li>
           <p>Quel traitement de première intention instaurez-vous en fonction du grade (classification de Ring et Messmer) ? :</p>
-          <table id="traitements1" class="border cb">
+          
+          <?php
+              $sel = new Select(null, true);
+              $sel->add_option("Antihistaminiques per os",     "Anti-H1");
+              $sel->add_option("Antihistaminiques IV",         "Anti-H1 IV");
+              $sel->add_option("Corticoïdes per os",           "Cortico");
+              $sel->add_option("Corticoïdes IV",               "Cortico IV");
+              $sel->add_option("Adrénaline IM",                "Adre IM");
+              $sel->add_option("Aérosols de Béta2-mimétiques", "value");
+              $sel->add_option("Aérosols d'adrénaline",        "value");
+              $sel->add_option("Corticoïdes inhalés",          "value");
+          ?>
+            
+          <table id="traitements3">
             <tr>
-              <td class="padded" rowspan="2">Symptômes</td>
-              <td class="center title" colspan="5">Traitements de première intention</td>
+              <td colspan="3" class="padded grade_1">Signes cutanéo-muqueux isolés</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded center title">Antihistaminiques<br/>per os</td>
-              <td class="padded center title">Antihistaminiques<br/>IV</td>
-              <td class="padded center title">Corticoïdes<br/>per os</td>
-              <td class="padded center title">Corticoïdes<br/>IV</td>
-              <td class="padded center title">Adrénaline<br/>IM</td>
+              <td colspan="3" class="padded grade_2">Toux</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_1">Signes cutanéo-muqueux isolés</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_2">Nausées</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_2">Tachycardie</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Œdème de Quincke</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_2">Hypotension modérée</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Etat de choc</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_2">Hyper-réactivité bronchique</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Bradycardie</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_2">Toux</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Troubles du rythme</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_2">Nausées</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Bronchospasme</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_3">Œdème de Quincke</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Troubles de la conscience</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_3">Etat de choc</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3" class="padded grade_3">Vomissements / diarrhées</td>
+              <td><?php $sel->print_html() ?></td>
+              <td class="padded">Autre : </td>
+              <td><?php text() ?></td>
             </tr>
             <tr>
-              <td class="padded grade_3">Bradycardie</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
+              <td colspan="3">&nbsp;</td>
             </tr>
-            <tr>
-              <td class="padded grade_3">Troubles du rythme</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
-            </tr>
-            <tr>
-              <td class="padded grade_3">Bronchospasme</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
-            </tr>
-            <tr>
-              <td class="padded grade_3">Troubles de la conscience</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
-            </tr>
-            <tr>
-              <td class="padded grade_3">Vomissements / diarrhées</td>
-              <?php
-                $rbl = new RadioButtonList();
-                $rbl->add_radiobutton('Anti-H1',    null, 'reponse block');
-                $rbl->add_radiobutton('Anti-H1 IV', null, 'reponse block');
-                $rbl->add_radiobutton('Cortico',    null, 'reponse block');
-                $rbl->add_radiobutton('Cortico IV', null, 'reponse block');
-                $rbl->add_radiobutton('Adre IM',    null, 'reponse block');
-                $rbl->print_td();
-              ?>
-            </tr>
-          </table>
-      
-          <table id="legend">
             <tr>
               <td class="padded grade_1">Grade I</td>
               <td class="padded grade_2">Grade II</td>
@@ -324,15 +232,14 @@
         </li>
     
         <li>
-          <p>Vous n’hospitalisez pas le patient (pas de signe de gravité). Quels traitements préventifs prescrivez-vous ?</p>
+          <p>Vous n'hospitalisez pas le patient (pas de critère de gravité) et prescrivez un traitement préventif adapté à la situation clinique. Pour quelle durée ?</p>
           <?php
-            checkbox('Corticoïdes per os sur une courte durée', 'reponse block');
-            checkbox('Beta2-mimétiques en inhalation',          'reponse block');
-            checkbox('Anti-leucotriènes',                       'reponse block');
-            checkbox('Anti-histaminiques',                      'reponse block');
-            checkbox('Stylos auto-injecteurs d’adrénaline',    'reponse block');
+            $rbl = new RadioButtonList();
+            $rbl->add_radiobutton('< 3',   'Moins de 3 jours', 'reponse block');
+            $rbl->add_radiobutton('3 à 7', '3 à 7 jours',      'reponse block');
+            $rbl->add_radiobutton('> 7',   'Plus de 7 jours',  'reponse block');
+            $rbl->print_td();
           ?>
-          <div>Autres :&nbsp;<?php text() ?></div>
         </li>
         
         <li>
