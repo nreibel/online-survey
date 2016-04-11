@@ -18,7 +18,7 @@
     </div>
 
     <div id="title">
-      <h2>PRISE EN CHARGE DE L'ANAPHYLAXIE</h2>
+      <h1>PRISE EN CHARGE DE L'ANAPHYLAXIE</h1>
       <h2 class="sub">Étude sur le savoir déclaratif des internes de médecine générale d'Alsace et de Lorraine</h2>
     </div>
 
@@ -152,10 +152,10 @@
               $sel->add_option("Antihistaminiques IV",         "Anti-H1 IV");
               $sel->add_option("Corticoïdes per os",           "Cortico");
               $sel->add_option("Corticoïdes IV",               "Cortico IV");
-              $sel->add_option("Adrénaline IM",                "Adre IM");
-              $sel->add_option("Aérosols de Béta2-mimétiques", "value");
-              $sel->add_option("Aérosols d'adrénaline",        "value");
-              $sel->add_option("Corticoïdes inhalés",          "value");
+              $sel->add_option("Adrénaline IM",                "Adré IM");
+              $sel->add_option("Aérosols de Béta2-mimétiques", "Beta2 Inhal");
+              $sel->add_option("Aérosols d'adrénaline",        "Adré Inhal");
+              $sel->add_option("Corticoïdes inhalés",          "Cortico Inhal");
           ?>
             
           <table id="traitements3">
