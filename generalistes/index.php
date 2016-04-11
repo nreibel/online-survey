@@ -152,9 +152,9 @@
               $sel->add_option("Antihistaminiques IV",         "Anti-H1 IV");
               $sel->add_option("Corticoïdes per os",           "Cortico");
               $sel->add_option("Corticoïdes IV",               "Cortico IV");
-              $sel->add_option("Adrénaline IM",                "Adré IM");
+              $sel->add_option("Adrénaline IM",                "Adre IM");
               $sel->add_option("Aérosols de Béta2-mimétiques", "Beta2 Inhal");
-              $sel->add_option("Aérosols d'adrénaline",        "Adré Inhal");
+              $sel->add_option("Aérosols d'adrénaline",        "Adre Inhal");
               $sel->add_option("Corticoïdes inhalés",          "Cortico Inhal");
           ?>
             
@@ -236,7 +236,7 @@
           <?php
             $rbl = new RadioButtonList();
             $rbl->add_radiobutton('< 3',   'Moins de 3 jours', 'reponse block');
-            $rbl->add_radiobutton('3 à 7', '3 à 7 jours',      'reponse block');
+            $rbl->add_radiobutton('3 a 7', '3 à 7 jours',      'reponse block');
             $rbl->add_radiobutton('> 7',   'Plus de 7 jours',  'reponse block');
             $rbl->print_td();
           ?>
