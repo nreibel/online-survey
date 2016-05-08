@@ -73,7 +73,19 @@
         </li>
         
         <li>
-          <p>Vous estimez-vous bien formé pour prendre en charge des patients allergiques et/ou une anaphylaxie?</p>
+          <p>A quel moment de vos études êtes-vous formés sur la prise en charge des urgences allergiques ?</p>
+          <?php
+            checkbox('Lors d\'un module en 2e cycle'    , 'reponse block');
+            checkbox('Lors de votre stage aux urgences' , 'reponse block');
+            checkbox('Autoformation'                    , 'reponse block');
+            checkbox('Autre'                            , 'reponse');
+          ?>
+          &nbsp;
+          <?php text(); ?>
+        </li>
+        
+        <li>
+          <p>Vous estimez-vous bien formé pour prendre en charge des patients allergiques et/ou une anaphylaxie ?</p>
           <?php
             $rbl = new RadioButtonList();
             $rbl->add_radiobutton('Très bien',   'Très bien',   'reponse block');
